@@ -3,6 +3,7 @@
 
 	<head>
 
+		<link rel="stylesheet" href="index.css">
 		<script defer type="text/javascript" src="index.js"></script>
 
 		<title>Minesweeper</title>
@@ -10,6 +11,19 @@
 	</head>
 
 	<body>
+
+		<div>
+			<p>Dimensions</p>
+			<input type=text value="10" id="width">
+			<input type=text value="10" id="height">
+			<p>Mines</p>
+			<input type=text value="10" id="mine">
+			<input type=button value="New Game" id="reset">
+		</div>
+
+		<hr>
+
+		<div id="game"></div>
 
 		<p>Hello, world!</p>
 

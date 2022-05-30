@@ -1,0 +1,22 @@
+html {
+	width: fit-content;
+}
+
+#game {
+	display: grid;
+	gap: .5em;
+	width: fit-content;
+}
+
+.cell {
+	width: 2em;
+	height: 2em;
+}
+
+.cell-closed {
+	background-color: blue;
+}
+
+.cell-opened {
+	background-color: red;
+}
