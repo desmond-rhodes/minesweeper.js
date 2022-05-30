@@ -76,12 +76,12 @@ function reset() {
 	console.log(`${game_width} ${game_height}`)
 }
 
-d_game_width.addEventListener('keyup', numeric_only)
-d_game_height.addEventListener('keyup', numeric_only)
-d_mine.addEventListener('keyup', numeric_only)
-d_cell_width.addEventListener('keyup', numeric_only)
-d_cell_height.addEventListener('keyup', numeric_only)
-d_cell_padding.addEventListener('keyup', numeric_only)
+d_game_width.addEventListener('focusout', numeric_only)
+d_game_height.addEventListener('focusout', numeric_only)
+d_mine.addEventListener('focusout', numeric_only)
+d_cell_width.addEventListener('focusout', numeric_only)
+d_cell_height.addEventListener('focusout', numeric_only)
+d_cell_padding.addEventListener('focusout', numeric_only)
 
 d_reset.addEventListener('click', reset)
 reset()
