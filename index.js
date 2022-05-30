@@ -12,10 +12,11 @@ function numeric_only() {
 		this.value = 10
 }
 
-function open() {
-	if (this.classList.contains('cell-closed')) {
-		this.classList.remove('cell-closed')
-		this.classList.add('cell-opened')
+function open(event) {
+	classList = event.target.classList
+	if (classList.contains('cell-closed')) {
+		classList.remove('cell-closed')
+		classList.add('cell-opened')
 	}
 }
 
@@ -31,7 +32,8 @@ function construct() {
 			const cell = document.createElement('div')
 			cell.classList.add('cell');
 			cell.classList.add('cell-closed');
-			cell.addEventListener('click', open);
+			cell.addEventListener('mousedown', open);
+			cell.addEventListener('touchstart', open);
 			game.appendChild(cell)
 		}
 }
