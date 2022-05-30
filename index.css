@@ -4,13 +4,7 @@ html {
 
 #game {
 	display: grid;
-	gap: .5em;
 	width: fit-content;
-}
-
-.cell {
-	width: 2em;
-	height: 2em;
 }
 
 .cell-closed {
