@@ -172,8 +172,6 @@ function reset() {
 
 	construct_data()
 	construct_html()
-
-	console.log(`${game_width} ${game_height}`)
 }
 
 d_game_width.addEventListener('focusout', numeric_only)
@@ -185,5 +183,3 @@ d_cell_padding.addEventListener('focusout', numeric_only)
 
 d_reset.addEventListener('click', reset)
 reset()
-
-console.log('Hello, world!')
