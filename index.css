@@ -7,10 +7,21 @@ html {
 	width: fit-content;
 }
 
-.cell-closed {
-	background-color: blue;
+.cell {
+	background-color: teal;
+	display: table;
+	text-align: center;
 }
 
-.cell-opened {
-	background-color: red;
+.cell > p {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.cell.opened {
+	background-color: lightgray;
+}
+
+.cell.opened.bomb {
+	background-color: fuchsia;
 }
