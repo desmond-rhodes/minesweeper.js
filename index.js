@@ -31,15 +31,17 @@ function numeric_only() {
 		switch (this.id) {
 		case 'game-width':
 		case 'game-height':
-		case 'mine-amount':
 			this.value = 10
+			break
+		case 'mine-amount':
+			this.value = 20
 			break
 		case 'cell-width':
 		case 'cell-height':
-			this.value = 60
+			this.value = 32
 			break
 		case 'cell-padding':
-			this.value = 15
+			this.value = 4
 			break
 		}
 }
