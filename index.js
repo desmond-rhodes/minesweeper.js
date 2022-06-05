@@ -44,6 +44,8 @@ function numeric_only() {
 			this.value = 4
 			break
 		}
+	if (d_mine_amount.value > d_game_width.value * d_game_height.value)
+		d_mine_amount.value = d_game_width.value * d_game_height.value
 }
 
 function add_mine(y, x) {
