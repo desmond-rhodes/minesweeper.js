@@ -10,6 +10,7 @@ const d_cell_height = document.getElementById('cell-height')
 const d_cell_padding = document.getElementById('cell-padding')
 
 const d_reset = document.getElementById('reset')
+const d_refresh = document.getElementById('refresh')
 
 const game = document.getElementById('game')
 const announce = document.getElementById('announce')
@@ -179,6 +180,24 @@ function reset() {
 	construct_html()
 }
 
+function refresh() {
+	cell_width = Number(d_cell_width.value)
+	cell_height = Number(d_cell_height.value)
+	cell_padding = Number(d_cell_padding.value)
+
+	game.style['gap'] = `${cell_padding}px`
+
+	for (let i = 0; i < game_width * game_height; ++i) {
+		const cell = game.children[i]
+
+		cell.style['width'] = `${cell_width}px`
+		cell.style['height'] = `${cell_height}px`
+
+		for (let j = 0; j < cell.children.length; ++j)
+			cell.children[j].style['font-size'] = `${Math.min(cell_width*.75, cell_height*.75)}px`
+	}
+}
+
 d_game_width.addEventListener('focusout', numeric_only)
 d_game_height.addEventListener('focusout', numeric_only)
 d_mine_amount.addEventListener('focusout', numeric_only)
@@ -188,3 +207,5 @@ d_cell_padding.addEventListener('focusout', numeric_only)
 
 d_reset.addEventListener('click', reset)
 reset()
+
+d_refresh.addEventListener('click', refresh)
