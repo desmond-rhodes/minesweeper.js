@@ -126,17 +126,15 @@ function open(event) {
 		break
 	case 0:
 		opened += 1
-		if (opened == game_width * game_height - mine_amount)
-			game_over(true)
 		break
 	default:
 		symbol.innerHTML = `${arena[y][x]}`
 		target.appendChild(symbol)
 		opened += 1
-		if (opened == game_width * game_height - mine_amount)
-			game_over(true)
 		break
 	}
+	if (opened == game_width * game_height - mine_amount)
+		game_over(true)
 }
 
 function construct_html() {
